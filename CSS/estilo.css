@@ -56,6 +56,7 @@ body {
     font-size: 15px;
     font-weight: 500;
     transition: color 0.2s;
+    display: flex;
 }
 
 .nav-menu a:hover {
