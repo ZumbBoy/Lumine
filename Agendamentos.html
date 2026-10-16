@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Agendamentos</title>
+  <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+
+  <!-- Cabeçalho Fixo (igual ao da home para manter o padrão) -->
+  <header class="top-header">
+    <a class="logo" href="Main.html">Lumine</a>
+    <nav class="nav-menu">
+      <a href="Agendamento.html">Novo Agendamento</a>
+      <a href="Main.html">Voltar</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <section class="content-section">
+      <h2>Meus Agendamentos</h2>
+      <p class="section-subtitle">Acompanhe abaixo os horários reservados no salão.</p>
+
+      <!-- Lista / Tabela de Agendamentos -->
+      <div class="appointments-container">
+        
+        <!-- Exemplo de Agendamento 1 -->
+        <div class="appointment-card">
+          <div class="appointment-info">
+            <h3>Cabelo (Corte e Escova)</h3>
+            <p><strong>Data:</strong> 18/10/2026</p>
+            <p><strong>Horário:</strong> 10:30 - Manhã</p>
+          </div>
+          <div class="appointment-status">
+            <span class="badge confirmed">Confirmado</span>
+            <button class="btn-cancel">Cancelar</button>
+          </div>
+        </div>
+
+        <!-- Exemplo de Agendamento 2 -->
+        <div class="appointment-card">
+          <div class="appointment-info">
+            <h3>Manicure & Pedicure</h3>
+            <p><strong>Data:</strong> 25/10/2026</p>
+            <p><strong>Horário:</strong> 15:00 - Tarde</p>
+          </div>
+          <div class="appointment-status">
+            <span class="badge confirmed">Confirmado</span>
+            <button class="btn-cancel">Cancelar</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botão para voltar ou agendar mais -->
+      <div style="margin-top: 30px; text-align: center;">
+        <a href="Agendamento.html" class="btn-secundario" style="display: inline-block; max-width: 250px;">Fazer Novo Agendamento</a>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>

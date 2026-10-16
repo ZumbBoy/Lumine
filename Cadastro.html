@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+
+<body>
+
+  <header class="top-header">
+    <a class="logo" href="Login.html">Lumine</a>
+    <nav class="nav-menu">
+      <a href="Login.html">Voltar</a>
+    </nav>
+  </header>
+  
+  <main class="login-container">
+    <h2 style="text-align: center;">Cadastro</h2>
+    
+    <form>
+      <!-- Campo NOVO: Nome -->
+      <div class="input-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+      </div>
+
+      <!-- Campo REUTILIZADO: E-mail -->
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+      </div>
+
+      <!-- Campo REUTILIZADO: Senha -->
+      <div class="input-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+      </div>
+
+      <!-- Campo NOVO: Confirmar Senha -->
+      <div class="input-group">
+        <label for="confirmar-senha">Confirmar Senha</label>
+        <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" required>
+      </div>
+
+      <!-- Botões mantendo o padrão da sua primeira tela -->
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <div class="divider">
+      <span>Ou acesse com</span>
+    </div>
+
+    <div class="social-login">
+      <button type="button" class="btn-google">
+          <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google Logo" class="icon-google">
+          Cadastrar com o Google
+      </button>
+    </div>
+  </main>
+
+</body>
+</html>

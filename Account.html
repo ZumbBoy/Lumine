@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Conta</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <header class="top-header">
+      <a class="logo" href="Main.html">Lumine</a>
+      <nav class="nav-menu">
+        <a href="Main.html">Voltar</a>
+      </nav>
+    </header>
+</head>
+<body>
+    
+  <!-- Conteúdo Principal da Conta -->
+  <main class="main-content">
+    <section class="content-section">
+      <h2>Minha Conta</h2>
+      <p class="section-subtitle">Gerencie suas informações pessoais e preferências no Lumine.</p>
+
+      <!-- Painel de Perfil -->
+      <div class="account-dashboard">
+        
+        <!-- Cartão de Dados Pessoais -->
+        <div class="account-card">
+          <h3>👤 Dados Pessoais</h3>
+          <form class="account-form">
+            <div class="form-group">
+              <label for="nome">Nome Completo</label>
+              <input type="text" id="nome" value="Maria Silva" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">E-mail de Acesso</label>
+              <input type="email" id="email" value="maria.silva@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" value="(11) 98765-4321" required>
+            </div>
+
+            <button type="button" class="btn-primary" onclick="alert('Alterações salvas com sucesso!')">Salvar Alterações</button>
+          </form>
+        </div>
+
+        <!-- Cartão de Atalhos e Resumo -->
+        <div class="account-summary-card">
+          <h3>✨ Atalhos Rápidos</h3>
+          <p>Acesse rapidamente outras áreas do seu perfil.</p>
+          
+          <div class="account-links-list">
+            <a href="agendamentos.html" class="account-action-link">📅 Ver Meus Agendamentos</a>
+            <a href="Agendamento.html" class="account-action-link">✂️ Fazer Novo Agendamento</a>
+          </div>
+
+          <div class="account-logout-box">
+            <a href="Main.html" class="btn-cancel" style="display: block; text-align: center; text-decoration: none;">Encerrar Sessão (Sair)</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>

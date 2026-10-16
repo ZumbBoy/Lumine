@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumine - Página Principal</title>
+  <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+
+  <!-- Cabeçalho de Navegação -->
+  <header class="top-header">
+    <a class="logo" href="Main.html">Lumine</a>
+    <nav class="nav-menu">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="Agendamentos.html">Agendamentos</a>
+      <a href="Login.html">Sair</a>
+      <a href="Account.html" class="account-link">
+      <span class="account-icon">👤</span> Conta
+    </a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="inicio" class="main-content">
+    
+    <!-- Seção Principal de Apresentação (Hero) -->
+    <section class="hero-section">
+      <h1>Bem-vindo ao <span class="destaque"> <i>Lumine</i></span>!</h1> 
+      <p>Sua plataforma para gerenciar e iluminar suas ideias com simplicidade e eficiência.</p>
+      <button type="button" class="btn-primary-main" onclick="window.location.href='Agendamento.html'">Agendar Horário</button>
+    </section>
+
+    
+
+    <!-- ================= NOVAS SEÇÕES DE DESTINO ================= -->
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="content-section">
+  <h2>Nossos Serviços</h2>
+  <p class="section-subtitle">Conheça tudo o que oferecemos para cuidar da sua beleza.</p>
+
+  <!-- Container dos cards de serviços lado a lado -->
+  <div class="services-grid">
+    
+    <!-- Serviço 1 -->
+    <div class="service-card">
+      <div class="service-icon">✂️</div>
+      <h3>Cabelo</h3>
+      <p>Cortes modernos, tintura, luzes, hidratação profunda e escova modelada.</p>
+      <span class="price">A partir de R$ 50</span>
+    </div>
+
+    <!-- Serviço 2 -->
+    <div class="service-card">
+      <div class="service-icon">💅</div>
+      <h3>Manicure & Pedicure</h3>
+      <p>Esmaltação simples e em gel, cutilagem e alongamento em fibra.</p>
+      <span class="price">A partir de R$ 35</span>
+    </div>
+
+    <!-- Serviço 3 -->
+    <div class="service-card">
+      <div class="service-icon">💄</div>
+      <h3>Estética & Make</h3>
+      <p>Maquiagem profissional, design de sobrancelhas e limpeza de pele.</p>
+      <span class="price">A partir de R$ 80</span>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Seção Sobre Nós -->
+   <section id="sobre" class="content-section">
+  <h2>Sobre o Lumine</h2>
+  <p class="about-text">
+    No <strong>Lumine Salão de Beleza</strong>, acreditamos que cuidar de você vai muito além da estética — é sobre destacar a sua melhor versão e renovar sua autoestima.
+  </p>
+  <p class="about-text">
+    Nosso espaço foi cuidadosamente planejado para oferecer uma experiência de conforto, bem-estar e atendimento personalizado. Contamos com uma equipe de profissionais apaixonados pelo que fazem, sempre atualizados com as principais tendências e técnicas do mercado para cuidar dos seus cabelos, unhas e estética com todo o carinho que você merece.
+  </p>
+  <p class="about-text">
+    Venha nos visitar, tomar um café conosco e viver um momento só seu!
+  </p>
+</section>
+
+    
+
+  </main>
+
+</body>
+</html>

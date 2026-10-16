@@ -1,0 +1,614 @@
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+#inicio {
+    scroll-margin-top: 100px;
+}
+
+body {
+    background-color: rgb(156, 189, 189);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; 
+    background-image: url(https://vidasimples.co/wp-content/uploads/2024/10/natureza-professora-iStock-601009538.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================================
+   2. CABEÇALHO FIXO E NAVEGAÇÃO
+   ========================================= */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: rgba(255, 255, 255, 0.9); /* Evita que o conteúdo da página apareça por trás */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.top-header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9b079b;
+    text-decoration: none;
+}
+
+.nav-menu a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+.account-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f8f9fa;
+  padding: 5px 12px;
+  border-radius: 20px; /* Deixa com um formato de pílula/botão sutil */
+  border: 1px solid #e9ecef;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.account-link:hover {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+  color: #007bff;
+}
+
+
+/* =========================================
+   3. ESTRUTURA PRINCIPAL (MAIN) E SEÇÕES GERAIS
+   ========================================= */
+.main-content {
+  margin-top: 90px; /* Garante que o topo fixo não cubra o início do conteúdo */
+  padding: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo das seções que vão abrir ao clicar nos cards */
+.content-section {
+  background-color: #ffffff99;
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  scroll-margin-top: 90px; /* Distância de parada para o menu não cobrir o título */
+}
+
+/* Subtítulo Geral das Seções */
+.section-subtitle {
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   4. SEÇÃO HERO (APRESENTAÇÃO)
+   ========================================= */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffffff99;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #000000;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+}
+
+.btn-primary-main {
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary-main:hover {
+  background-color: #5a6268;
+}
+
+
+/* =========================================
+   5. GRADE DE RECURSOS / CARDS DO TOPO
+   ========================================= */
+.features-section {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;             /* Ajusta em telas menores/celulares */
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #ffffff99;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card h3 {
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   6. SEÇÃO DE SERVIÇOS
+   ========================================= */
+/* Container que organiza os cards de serviço em linha */
+.services-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Em telas muito pequenas/celulares, eles se ajustam para baixo automaticamente */
+}
+
+/* Estilo individual de cada card de serviço */
+.service-card {
+  flex: 1;
+  min-width: 220px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+/* Ícone/Emoji do serviço */
+.service-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  color: #000000;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Preço destacado */
+.service-card .price {
+  display: inline-block;
+  font-weight: bold;
+  color: #007bff;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   7. SEÇÃO SOBRE NÓS
+   ========================================= */
+.about-text {
+  color: #000000;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.destaque {
+    color: #9b079b;
+}
+
+
+/* =========================================
+   8. TELAS DE LOGIN / CADASTRO / FORMULÁRIOS
+   ========================================= */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-google:hover {
+    background-color: #5a6268;
+}
+
+.icon-google {
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background-color: #5a6268;
+}
+
+.btn-secundario {
+  display: block;             /* Faz o link se comportar como um bloco (botão) */
+  width: 100%;                /* Ocupa toda a largura da caixa */
+  padding: 10px;
+  margin-top: 10px;           /* Cria o espaçamento entre os dois botões */
+  background-color: #007bff;  /* Cor para diferenciar */
+  color: white;
+  text-align: center;         /* Centraliza o texto */
+  text-decoration: none;      /* Remove o sublinhado padrão dos links */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 13.33px;         /* Mantém o mesmo tamanho de fonte do botão */
+  transition: background-color 0.2s;
+}
+
+.btn-secundario:hover {
+  background-color: #5a6268;  /* Efeito ao passar o mouse */
+}
+
+
+/* =========================================
+   9. SEÇÃO DE AGENDAMENTO
+   ========================================= */
+.agendamento-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Caixa centralizada do formulário de agendamento principal */
+.booking-form {
+  max-width: 500px;
+  margin: 0 auto; /* Centraliza a caixa na tela */
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left; /* Garante que os rótulos fiquem alinhados à esquerda */
+}
+
+/* Grupo de campos (Label + Input/Select) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Rótulo (Texto explicativo do campo) */
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Estilo unificado para caixas de seleção (select) e inputs de data */
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  box-sizing: border-box; /* Impede que o padding quebre a largura */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito visual quando o usuário clica ou foca em um campo */
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Botão de confirmação de agendamento */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Tom verde para indicar confirmação/sucesso */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #5a6268;
+}
+
+.btn-primary:active {
+  transform: scale(0.98); /* Leve efeito de clique */
+}
+
+/* =========================================
+   ESTILOS DA TELA DE LISTA DE AGENDAMENTOS
+   ========================================= */
+
+.appointments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Card individual de cada agendamento */
+.appointment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.appointment-info h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.appointment-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Status e Ações do card */
+.appointment-status {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Badge de confirmação */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Botão de cancelar agendamento */
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #c82333;
+}
+
+/* =========================================
+   ESTILOS DA TELA DE CONTA / PERFIL
+   ========================================= */
+
+/* Layout do painel (organiza os cartões lado a lado) */
+.account-dashboard {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap; /* Em celulares, coloca um embaixo do outro */
+  align-items: flex-start;
+}
+
+/* Cartão principal: Dados Pessoais */
+.account-card {
+  flex: 2;
+  min-width: 280px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.account-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 18px;
+}
+
+/* Cartão lateral: Atalhos Rápidos */
+.account-summary-card {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.account-summary-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 18px;
+}
+
+.account-summary-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Botões da lista de atalhos */
+.account-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.account-action-link {
+  display: block;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.account-action-link:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+  color: #007bff;
+}
