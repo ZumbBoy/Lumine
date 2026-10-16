@@ -32,7 +32,7 @@
   <!-- 2. Seleção da Data -->
   <div class="form-group">
     <label for="data">Data do Atendimento</label>
-    <input type="date" id="data" name="data" required>
+    <input type="date" id="data" name="data" required min="2026-10-16">
   </div>
 
   <!-- 3. Seleção do Horário -->
@@ -55,5 +55,13 @@
   <button type="submit" class="btn-primary">Confirmar Agendamento</button>
 </form>
   </main>
+
+    <script>
+  // Pega a data de hoje no formato AAAA-MM-DD
+  const hoje = new Date().toISOString().split('T')[0];
+  
+  // Aplica automaticamente no input de data (certifique-se que o id do seu input é 'data')
+  document.getElementById('data').setAttribute('min', hoje);
+</script>
 </body>
 </html>
